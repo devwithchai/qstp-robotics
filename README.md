@@ -1,8 +1,8 @@
-# Autonomous Ground Robot — QSTP Learning Archive
+# Autonomous Ground Robot — BITS Pilani QSTP Learning Archive
 
-This repository documents my work from multiple **Project Kratos / Quark Summer Technical Project (QSTP)** programs focused on autonomous mobile robotics.
+This repository documents my work from multiple **BITS Pilani Quark Summer Technical Project (QSTP)** programs focused on autonomous mobile robotics.
 
-Instead of treating this as one finished robot project, the repository is being organized as a **multi-year learning archive** showing how my work progressed across different QSTP editions.
+Instead of treating this as one finished robot project, the repository is being organized as a **multi-year learning archive** showing how the work progressed across different QSTP editions.
 
 ## Program Status
 
@@ -13,6 +13,14 @@ Instead of treating this as one finished robot project, the repository is being 
 | 2026 | Project Kratos: The Art of Autonomous Navigation | Planned / in development | I have the complete weekly task set and will complete it with a cleaner development workflow and Git history. |
 
 > The 2024 section is kept as an honest archive of my earlier learning work. I do not plan to recreate missing tasks just to make it look complete.
+
+---
+
+## About the Program
+
+The work in this repository comes from **BITS Pilani's Quark Summer Technical Project (QSTP)** programs conducted through Project Kratos / the Electronics and Robotics Club at BITS Pilani, K. K. Birla Goa Campus.
+
+I participated in these programs as a student from **K. K. Wagh Institute of Engineering Education & Research (KKWIEER), Nashik**.
 
 ---
 
@@ -37,7 +45,7 @@ The 2025 and 2026 work will be added gradually as I complete the original assign
 
 ## Current Repository Content
 
-At present, the repository mainly contains my **2024 QSTP work**.
+At present, the repository mainly contains my **2024 BITS Pilani QSTP work**.
 
 ### 2024 — Autonomous Ground Robot
 
@@ -199,11 +207,3 @@ Motion Control
         ↓
 Autonomous Navigation
 ```
-
----
-
-## Author
-
-**Chaitanya Belekar**  
-Robotics and Automation Engineering  
-K.K. Wagh Institute of Engineering Education & Research, Nashik
