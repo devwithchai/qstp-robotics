@@ -20,7 +20,6 @@ qstp-robotics/
 │   ├── 2025/
 │   └── 2026/
 └── introduction-to-ros2/
-    └── 2026/
 ```
 
 The existing 2024 work is kept as a partial archive. The remaining course work will be added gradually as I revisit each task, understand the concepts behind it, and document what I build.
