@@ -28,4 +28,4 @@ qstp-robotics/
 
 Work will be added gradually as I study each task, implement it, test it, and document what I learned.
 
-> This is a personal learning repository. It is not an official repository of BITS Pilani, Quark, or Project Kratos, and it does not represent completion or certification for every listed program.
+> This is a personal learning repository and is not an official repository of BITS Pilani, Quark, or Project Kratos.
