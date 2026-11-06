@@ -2,19 +2,18 @@
 
 This is a working checklist for my robotics QSTP exercises. It tracks **files that exist**, **work that has been tested**, and **tasks still to attempt** separately. A file being present does not mean the assignment was completed or accepted.
 
-The course outlines below come from the handouts for each edition. The file/status observations are based on the repository as of 26 October 2026.
+The course outlines below come from the handouts for each edition. The file/status observations are based on the repository as of 6 November 2026.
 
 ## Project Kratos — Autonomous Subsystem (2024)
 
 | Week | Course-handout topic | What is currently in this repo | Status |
 | --- | --- | --- | --- |
-| 1 | Set up Ubuntu and ROS | `week-01/odd_even_ros.py` (a ROS 2 publisher/subscriber exercise) | Code present; needs correction/testing. This file alone does not establish the setup task was completed. |
+| 1 | Set up Ubuntu and ROS | `week-01/odd_even_ros.py` (a ROS 2 publisher/subscriber exercise) | The ROS 2 exercise is corrected and runtime-tested on ROS 2 Humble: publisher/subscriber operation and odd/even classification were verified, and Ctrl+C exits cleanly. See [PR #6](https://github.com/devwithchai/qstp-robotics/pull/6). This script alone does not establish that the broader setup task was completed. |
 | 2 | ROS publisher/subscriber and TurtleBot obstacle avoidance | `week-02/week2_assignments/keyboard_control.py` and `turtlebot_controller.py` | Code present; package setup and runtime behavior need checking. |
 | 3 | ROS Actionlib and action servers for obstacle handling | `week-03/week3_assignment/path_planner.py` and `pid_controller.py` | A* and PID code present, but these files do not establish that the handout's action-server task was done. |
 | 4 | OpenCV with advanced navigation and color-based actions | No implementation on GitHub yet | Not documented |
 
 **Code review notes to revisit:**
-- Week 1: the two nodes are spun sequentially, so the classifier is never reached during normal operation.
 - Week 2: the `setup.py` package name and Python package folder do not match; the published tree also lacks some normal ROS package files. Verify `/scan`, `/odom`, and `/cmd_vel` in simulation.
 - Week 3: check A* neighbor costs, priority-queue updates, map indexing, and how the robot stops at its final goal.
 - Keep the original exercise goals separate from extra experiments. Record actual terminal/simulation results rather than marking code as tested in advance.
@@ -64,7 +63,6 @@ Only one edition of this program is included, so there is no extra year director
 
 ### Immediate next steps
 
-- [ ] Repair and test the 2024 Week 1 publisher/subscriber example.
 - [ ] Restore/verify the ROS package layout for 2024 Week 2; test teleoperation and obstacle stopping.
 - [ ] Review 2024 Week 3 A* and PID code against the actual assignment brief, then test it.
 - [ ] Gather the detailed weekly assignment instructions where the short handouts are insufficient.
