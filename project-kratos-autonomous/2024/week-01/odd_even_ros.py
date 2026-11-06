@@ -47,7 +47,7 @@ def main():
         executor.shutdown()
         publisher.destroy_node()
         classifier.destroy_node()
-        rclpy.shutdown()
+        rclpy.try_shutdown()
 
 if __name__ == '__main__':
     main()
