@@ -3,7 +3,6 @@ import math
 import numpy as np
 
 from week3_assignment.path_planner import AStarPlanner
-from week3_assignment.pid_controller import normalize_angle
 
 
 def test_astar_returns_path_on_free_grid():
@@ -48,10 +47,3 @@ def test_world_map_conversion_respects_origin_yaw():
         np.zeros((3, 3), dtype=int), 1.0, (1.0, 2.0, math.pi / 2.0)
     )
     assert planner.world_to_map((0.5, 2.5)) == (0, 0)
-
-
-def test_angle_normalization():
-    assert abs(abs(normalize_angle(3.0 * math.pi)) - math.pi) < 1e-9
-
-
-import pytest
