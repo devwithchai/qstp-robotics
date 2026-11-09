@@ -13,6 +13,10 @@ I participated in the Project Kratos Autonomous Subsystem QSTP in 2024, 2025, an
 | Project Kratos - Autonomous Subsystem QSTP | 2026 | To be revisited |
 | Introduction to ROS2 | 2026 | To be organized |
 
+## Progress tracker
+
+For assignment-by-assignment progress, review notes, and next steps, see the [QSTP progress tracker](PROGRESS.md).
+
 The yearly Kratos editions share core topics such as ROS, TurtleBot simulation, obstacle avoidance, actions, navigation, and computer vision. However, their assignments are not identical: each edition uses a different progression and adds new project work.
 
 ## Repository structure
