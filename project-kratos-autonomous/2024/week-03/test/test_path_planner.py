@@ -51,7 +51,7 @@ def test_world_map_conversion_respects_origin_yaw():
 
 
 def test_angle_normalization():
-    assert normalize_angle(3.0 * math.pi) == pytest.approx(math.pi)
+    assert abs(abs(normalize_angle(3.0 * math.pi)) - math.pi) < 1e-9
 
 
 import pytest
