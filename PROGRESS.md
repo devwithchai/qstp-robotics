@@ -13,10 +13,10 @@ The course outlines below come from the handouts for each edition. The file/stat
 | 3 | ROS Actionlib and action servers for obstacle handling | `week-03/week3_assignment/` | Package metadata repaired; A* grid indexing, diagonal costs, corner checks and map transforms corrected; PID path follower revised with bounded commands and goal stopping. A* tests added; build and simulator runtime still need verification. The handout's multiple action-server task remains unimplemented pending detailed requirements. |
 | 4 | OpenCV with advanced navigation and color-based actions | No implementation on GitHub yet | Not documented |
 
-**Code review notes to revisit:**
-- Week 2: the `setup.py` package name and Python package folder do not match; the published tree also lacks some normal ROS package files. Verify `/scan`, `/odom`, and `/cmd_vel` in simulation.
-- Week 3: check A* neighbor costs, priority-queue updates, map indexing, and how the robot stops at its final goal.
-- Keep the original exercise goals separate from extra experiments. Record actual terminal/simulation results rather than marking code as tested in advance.
+**Validation still required:**
+- Week 2: build the repaired package, confirm the simulator's actual topic names, and test keyboard command timeout, front-sector obstacle stopping, and stale-scan stopping.
+- Week 3: build the repaired package, test A* against representative occupancy grids, and tune the path follower in simulation. Obtain the detailed action-server requirements before implementing that part.
+- The new unit tests have been added but have not yet been executed in a ROS 2 Humble workspace. Record actual build and simulation results before marking either week runtime-tested.
 
 ## Project Kratos — Autonomous Subsystem (2025)
 
