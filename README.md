@@ -15,6 +15,10 @@ I participated in the Project Kratos Autonomous Subsystem QSTP in 2024, 2025, an
 
 The yearly Kratos editions share core topics such as ROS, TurtleBot simulation, obstacle avoidance, actions, navigation, and computer vision. However, their assignments are not identical: each edition uses a different progression and adds new project work.
 
+## Progress tracker
+
+See [`PROGRESS.md`](PROGRESS.md) for an assignment-by-assignment overview of the work currently in the repository, testing status, review notes, and next steps across the QSTP editions.
+
 ## Repository structure
 
 ```text
