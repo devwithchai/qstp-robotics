@@ -1,42 +1,63 @@
-# Week 2 — Obstacle Avoidance
+# Week 2 — Obstacle Avoidance using LaserScan
 
-## Assignment objective
+**Source:** [QSTP Assignment 2: Obstacle Avoidance using LaserScan](assignment.pdf)
 
-The 2025 handout states:
+## Objective
 
-> You will learn to implement basic obstacle avoidance behaviour on turtlebot.
+Use TurtleBot3 LaserScan data to implement basic obstacle avoidance. The robot should move in a straight line until it detects an obstacle in front. When an obstacle is detected, it should rotate right until the path is clear, then continue moving forward.
 
-## Implementation plan
+## Topics covered
 
-Build a ROS 2 node for the simulated TurtleBot that uses its laser scan data to make a basic obstacle-avoidance decision.
+- Subscribing to sensor data (`LaserScan`)
+- Writing ROS 2 subscribers and publishers
+- Obstacle-avoidance logic
+- Publishing velocity commands based on sensor input
 
-A minimal behaviour to implement and test:
+## Assignment tasks
 
-1. Subscribe to the TurtleBot `/scan` topic (`sensor_msgs/msg/LaserScan`).
-2. Read valid range measurements in the robot's forward field of view.
-3. Move forward while the path ahead is clear.
-4. When an obstacle is closer than a configurable safety threshold, stop forward motion and turn right.
-5. Resume forward motion when the forward path is clear.
-6. Publish velocity commands to `/cmd_vel` using `geometry_msgs/msg/Twist`.
+### 1. Create a ROS 2 package
 
-The scan topic, message type, threshold-based rule, and right-turn response are the concrete implementation plan for this repository. They are not additional quoted requirements from the short 2025 handout.
+- Package name: `obstacle_avoider`.
 
-## Suggested package contents
+### 2. Subscribe to LaserScan data
 
-- ROS 2 Python package and obstacle-avoidance node
-- Configurable minimum obstacle distance and forward scan sector
-- Launch/run instructions
-- Test notes describing obstacle placement and observed robot response
+- Subscribe to `/scan`.
+- Use the LaserScan data to monitor the area in front of the robot.
 
-## Verification checklist
+### 3. Implement the obstacle-avoidance logic
 
-- [ ] Confirm `/scan` message rate and frame.
-- [ ] Validate handling of `inf`, `nan`, and out-of-range scan values.
-- [ ] Verify forward motion when the path is clear.
-- [ ] Verify stopping and right-turn response when an obstacle is detected.
-- [ ] Verify that the robot does not continue publishing stale motion commands after shutdown.
-- [ ] Record simulation evidence and known limitations.
+- If the minimum front distance is greater than a threshold (the handout gives **0.5 metres** as an example), move forward.
+- If an obstacle is detected, stop and turn right.
+- Publish velocity commands on `/cmd_vel`.
 
-## Status
+The objective section describes the expected behaviour as turning right until the path is clear, then continuing forward.
 
-Not implemented yet. Do not mark this assignment complete until the behaviour is observed in Webots.
+## Submission requirements
+
+- Submit a short video to Google Classroom showing TurtleBot moving straight, reaching an obstacle, and turning right.
+- The video must also show a terminal displaying what is being published on the `cmd_vel` topic.
+- Original deadline in the handout: **2 August 2025**.
+
+## References in the handout
+
+- [ROS 2 LaserScan message](https://docs.ros2.org/latest/api/sensor_msgs/msg/LaserScan.html)
+- [ROS 2 Humble publisher/subscriber tutorial](https://docs.ros.org/en/humble/Tutorials/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
+- [TurtleBot3 simulation guide](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/)
+
+## Our implementation environment and progress
+
+The current implementation environment is Ubuntu 22.04, ROS 2 Humble, and Webots using `webots_ros2_turtlebot`. The handout refers to TurtleBot3 but does not mandate Webots; Webots is our simulator choice.
+
+Verified so far:
+
+- [x] Webots TurtleBot launches.
+- [x] `/scan` is available and publishes continuously (observed at approximately 4.45 Hz).
+- [x] `/cmd_vel` and `/odom` are available.
+- [ ] Create the `obstacle_avoider` ROS 2 package/node.
+- [ ] Implement front-sector distance checking and the 0.5 m example threshold.
+- [ ] Verify forward motion with a clear path.
+- [ ] Verify stop-and-turn-right behaviour until the path is clear.
+- [ ] Verify that forward motion resumes after the obstacle is cleared.
+- [ ] Capture the required video with the `cmd_vel` terminal output.
+
+**Status:** Sensor and command topics are available in Webots. The obstacle-avoidance node and its behaviour have not yet been implemented or tested.
