@@ -1,6 +1,6 @@
 # Week 1 — ROS 2 Basics
 
-**Source:** [QSTP Assignment 1: ROS 2 Basics](assignment.pdf)
+**Source:** [QSTP Assignment 1: ROS 2 Basics](https://drive.google.com/file/d/1GpiqTVfowTs_FQP9pMMJehuY8GAYUWUG/view?usp=drive_link)
 
 ## Objective
 
