@@ -3,7 +3,7 @@
   <name>turtle_controller</name>
   <version>0.0.1</version>
   <description>A beginner-friendly ROS 2 node for publishing TurtleBot velocity commands.</description>
-  <maintainer email="chaitanya@example.com">Chaitanya Belekar</maintainer>
+  <maintainer email="157277524+devwithchai@users.noreply.github.com">Chaitanya Belekar</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_python</buildtool_depend>
