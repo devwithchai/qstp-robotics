@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='Chaitanya Belekar',
-    maintainer_email='chaitanya@example.com',
+    maintainer_email='157277524+devwithchai@users.noreply.github.com',
     description='Beginner-friendly TurtleBot velocity controller',
     license='MIT',
     entry_points={
