@@ -70,8 +70,8 @@ Verified so far:
 - [x] `/scan` publishes continuously.
 - [x] A velocity command published to `/cmd_vel` visibly moved the TurtleBot.
 - [x] `/odom` reports the robot pose; one observed sample showed (x = 0.6559\,m), (y = 0.0\,m), after the movement test.
-- [ ] Create and run the custom `turtle_controller` Python package/node.
-- [ ] Verify circular motion using the custom node.
-- [ ] Capture the required video showing both script-based and terminal-based velocity publishing.
+- [x] Create and run the custom `turtle_controller` Python package/node.
+- [x] Verify circular motion using the custom node.
+- [x] Capture the required video showing both script-based and terminal-based velocity publishing.
 
-**Status:** Basic simulated velocity control and odometry are verified. The custom controller node, circular-motion demonstration, and submission video remain outstanding.
+**Status:** Week 1 implementation and testing are complete. The custom controller node successfully publishes velocity commands, the TurtleBot moves in a circle in Webots, and the required demonstration video has been recorded.
