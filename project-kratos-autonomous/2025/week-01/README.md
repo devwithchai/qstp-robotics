@@ -69,7 +69,7 @@ Verified so far:
 - [x] ROS 2 topics are visible.
 - [x] `/scan` publishes continuously.
 - [x] A velocity command published to `/cmd_vel` visibly moved the TurtleBot.
-- [x] `/odom` reports the robot pose; one observed sample showed (x = 0.6559\\,m), (y = 0.0\\,m), after the movement test.
+- [x] `/odom` reports the robot pose; one observed sample showed (x = 0.6559\,m), (y = 0.0\\,m), after the movement test.
 - [x] Create and run the custom `turtle_controller` Python package/node.
 - [x] Verify circular motion using the custom node.
 - [x] Capture the required video showing both script-based and terminal-based velocity publishing.
