@@ -78,6 +78,4 @@ Verified so far:
 
 [Watch the Week 1 ROS 2 velocity-control demonstration](https://drive.google.com/file/d/1PKEezS342-OfKXQR2kHGu1EnCZKZumIf/view?usp=sharing)
 
-> Google Drive may ask viewers to sign in. If access is restricted, the file owner must grant viewing permission to their Google account.
-
 **Status:** Week 1 implementation and testing are complete. The custom controller node successfully publishes velocity commands, the TurtleBot moves in a circle in Webots, and the required demonstration video has been recorded.
