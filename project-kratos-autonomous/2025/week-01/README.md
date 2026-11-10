@@ -76,7 +76,7 @@ Verified so far:
 
 ## Demonstration video
 
-[Watch the Week 1 ROS 2 velocity-control demonstration](https://drive.google.com/file/d/1P-1qKbrQ4QejilDiP6I-oN0-bVq_J-bA/view?usp=sharing)
+[Watch the Week 1 ROS 2 velocity-control demonstration](https://drive.google.com/file/d/1PKEezS342-OfKXQR2kHGu1EnCZKZumIf/view?usp=sharing)
 
 > Google Drive may ask viewers to sign in. If access is restricted, the file owner must grant viewing permission to their Google account.
 
