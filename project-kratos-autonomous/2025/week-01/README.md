@@ -1,48 +1,77 @@
-# Week 1 — Setting up ROS 2
+# Week 1 — ROS 2 Basics
 
-## Assignment objective
+**Source:** [QSTP Assignment 1: ROS 2 Basics](assignment.pdf)
 
-The 2025 handout states:
+## Objective
 
-> You will learn to set up Ubuntu and ROS2, as well as publish a velocity to a node.
+Get familiar with ROS 2 by interacting with topics, creating a simple ROS 2 package, and publishing velocity commands to control a simulated TurtleBot.
 
-## Learning and implementation tasks
+## Topics covered
 
-1. Use the Ubuntu 22.04 and ROS 2 Humble environment.
-2. Become familiar with the ROS 2 command-line interface and inspect the active ROS graph.
-3. Run the TurtleBot simulation and identify the velocity command and odometry topics.
-4. Publish a `geometry_msgs/msg/Twist` command to the robot velocity topic.
-5. Create a small ROS 2 package and a node that publishes velocity commands.
-6. Implement a circular-motion demonstration by publishing a constant forward velocity and a non-zero angular velocity.
-7. Inspect odometry to observe the robot's position and orientation while it moves.
+- ROS 2 topic communication
+- ROS 2 package creation
+- Publishing velocity commands to a TurtleBot
 
-The command-line publishing and circular-motion exercise are implementation steps used to demonstrate the handout's velocity-publishing objective; the handout itself does not prescribe a specific topic name, velocity, or circular trajectory.
+## Setup requirements from the handout
 
-## Current environment and observed checks
+1. Ubuntu 22.04 LTS
+2. ROS 2 Humble Hawksbill
+3. TurtleBot3 packages
 
-- OS: Ubuntu 22.04
-- ROS 2: Humble
-- Simulator: Webots with `webots_ros2_turtlebot`
-- Velocity topic observed: `/cmd_vel`
-- Odometry topic observed: `/odom`
-- Laser scan topic observed: `/scan`
-- A velocity command was published to `/cmd_vel`.
-- The TurtleBot was observed moving in Webots.
-- An odometry sample reported (x = 0.6559\,m), (y = 0.0\,m), with near-zero velocity at the time of capture.
+## Assignment tasks
 
-This verifies basic simulated movement and odometry publication. The custom circular-motion node and its runtime verification are still to be added.
+### 1. Set up a ROS 2 workspace
 
-## Verification checklist
+- Create a ROS 2 workspace (the handout gives `ros2_ws` as an example).
+- Source the ROS 2 setup file in `.bashrc`.
+
+### 2. Create a ROS 2 package
+
+- Package name: `turtle_controller`.
+- Write a Python script in the `turtle_controller` node that publishes velocity commands.
+
+### 3. Launch TurtleBot and publish velocities
+
+- Run TurtleBot.
+- Use the custom node to publish velocity commands to TurtleBot.
+- Try linear and angular velocity commands to make TurtleBot move in a circle.
+
+### 4. Monitor topics
+
+Use the ROS 2 CLI tools:
+
+- `ros2 topic list`
+- `ros2 topic echo`
+- `ros2 topic pub`
+
+The purpose is to understand ROS 2 topic communication.
+
+## Submission requirements
+
+- Submit a short video showing TurtleBot moving, with a terminal visible showing what is being published on the `cmd_vel` topic.
+- Demonstrate velocity publishing using **both** the custom script and terminal commands.
+- Original deadline in the handout: **26 July 2025**.
+
+## References in the handout
+
+- [ROS 2 Humble documentation](https://docs.ros.org/en/humble/index.html)
+- [ROS 2 Humble tutorials](https://docs.ros.org/en/humble/Tutorials.html)
+- [ROS 2 tutorial video](https://www.youtube.com/watch?v=Gg25GfA456o)
+- [TurtleBot3 simulation guide](https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/)
+
+## Our implementation environment and progress
+
+The current implementation environment is Ubuntu 22.04, ROS 2 Humble, and Webots using `webots_ros2_turtlebot`. Webots is our chosen simulator; the Week 1 handout itself does not prescribe a simulator.
+
+Verified so far:
 
 - [x] Webots TurtleBot launches.
 - [x] ROS 2 topics are visible.
 - [x] `/scan` publishes continuously.
-- [x] Velocity command causes visible robot movement.
-- [x] Odometry reports robot pose.
-- [ ] Create the `turtle_controller` ROS 2 Python package.
-- [ ] Run and verify the circular-motion node.
-- [ ] Record the final run command and evidence.
+- [x] A velocity command published to `/cmd_vel` visibly moved the TurtleBot.
+- [x] `/odom` reports the robot pose; one observed sample showed (x = 0.6559\,m), (y = 0.0\,m), after the movement test.
+- [ ] Create and run the custom `turtle_controller` Python package/node.
+- [ ] Verify circular motion using the custom node.
+- [ ] Capture the required video showing both script-based and terminal-based velocity publishing.
 
-## Notes
-
-Do not treat the initial manual `ros2 topic pub` check as completion of the custom-node exercise. Update this file after the package and circular-motion node have been implemented and tested.
+**Status:** Basic simulated velocity control and odometry are verified. The custom controller node, circular-motion demonstration, and submission video remain outstanding.
