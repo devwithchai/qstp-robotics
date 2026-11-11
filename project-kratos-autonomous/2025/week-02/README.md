@@ -38,6 +38,10 @@ The objective section describes the expected behaviour as turning right until th
 - The video must also show a terminal displaying what is being published on the `cmd_vel` topic.
 - Original deadline in the handout: **2 August 2025**.
 
+## Demonstration video
+
+[Watch the Week 2 obstacle-avoidance demonstration](https://drive.google.com/file/d/1UVp_tx9D8MLQvGscKsgjaxQzSTiSzj58/view?usp=sharing)
+
 ## References in the handout
 
 - [ROS 2 LaserScan message](https://docs.ros2.org/latest/api/sensor_msgs/msg/LaserScan.html)
@@ -46,18 +50,20 @@ The objective section describes the expected behaviour as turning right until th
 
 ## Our implementation environment and progress
 
-The current implementation environment is Ubuntu 22.04, ROS 2 Humble, and Webots using `webots_ros2_turtlebot`. The handout refers to TurtleBot3 but does not mandate Webots; Webots is our simulator choice.
+The implementation uses Ubuntu 22.04, ROS 2 Humble, and Webots with `webots_ros2_turtlebot`. The handout refers to TurtleBot3 but does not mandate Webots; Webots is our simulator choice.
 
-Verified so far:
+Verified:
 
 - [x] Webots TurtleBot launches.
 - [x] `/scan` is available and publishes continuously (observed at approximately 4.45 Hz).
 - [x] `/cmd_vel` and `/odom` are available.
-- [ ] Create the `obstacle_avoider` ROS 2 package/node.
-- [ ] Implement front-sector distance checking and the 0.5 m example threshold.
-- [ ] Verify forward motion with a clear path.
-- [ ] Verify stop-and-turn-right behaviour until the path is clear.
-- [ ] Verify that forward motion resumes after the obstacle is cleared.
-- [ ] Capture the required video with the `cmd_vel` terminal output.
+- [x] Create the `obstacle_avoider` ROS 2 package/node.
+- [x] Implement front-sector distance checking and the 0.5 m obstacle threshold.
+- [x] Verify forward motion with a clear path.
+- [x] Verify stop-and-turn-right behaviour until the path is clear.
+- [x] Verify that forward motion resumes after the obstacle is cleared.
+- [x] Capture the demonstration video.
 
-**Status:** Sensor and command topics are available in Webots. The obstacle-avoidance node and its behaviour have not yet been implemented or tested.
+The controller uses hysteresis: it starts turning when the minimum front distance is **0.5 m or less** and resumes forward motion once the distance reaches **0.65 m**. This helps prevent rapid switching when readings fluctuate near the obstacle threshold.
+
+**Status:** Week 2 implementation, simulation testing, and demonstration video are complete.
