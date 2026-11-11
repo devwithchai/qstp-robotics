@@ -34,6 +34,8 @@ The handout mentions Gazebo. This implementation uses **Webots** as the simulato
 
 ## Workspace structure
 
+The implementation uses the package layout below. The ROS 2 source packages have been implemented and tested locally; they still need to be synced into this remote `ros2_ws/src` directory before a fresh clone can build the workspace.
+
 ```text
 ros2_ws/
 └── src/
@@ -137,4 +139,4 @@ ros2 run coordinate_follower coordinate_sequence_client
 - The controller does not implement obstacle avoidance. Run the demonstration only in a clear, controlled path.
 - The configured goal tolerance is **0.10 m**, so the robot stops when it is within that distance of the target rather than needing to land exactly on the requested coordinate.
 
-**Status:** Week 3 implementation, sequential-goal testing, and demonstration recording are complete.
+**Implementation status:** Complete and tested in the local Webots simulation. **GitHub sync status:** README and workspace scaffold are in place; the two ROS 2 source packages still need to be pushed into `ros2_ws/src`.
