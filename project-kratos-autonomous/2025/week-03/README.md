@@ -69,9 +69,10 @@ The second coordinate is an absolute target in the `map` frame, not a relative d
 
 ## Build and run
 
-From the workspace directory:
+From the repository root, enter the workspace and build the packages:
 
 ```zsh
+cd project-kratos-autonomous/2025/week-03/ros2_ws
 source /opt/ros/humble/setup.zsh
 colcon build --packages-up-to coordinate_follower
 source install/setup.zsh
@@ -96,16 +97,18 @@ ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 map odom
 **Terminal 3 — Coordinate action server**
 
 ```zsh
+cd project-kratos-autonomous/2025/week-03/ros2_ws
 source /opt/ros/humble/setup.zsh
-source project-kratos-autonomous/2025/week-03/ros2_ws/install/setup.zsh
+source install/setup.zsh
 ros2 run coordinate_follower coordinate_action_server
 ```
 
 **Terminal 4 — Sequential action client**
 
 ```zsh
+cd project-kratos-autonomous/2025/week-03/ros2_ws
 source /opt/ros/humble/setup.zsh
-source project-kratos-autonomous/2025/week-03/ros2_ws/install/setup.zsh
+source install/setup.zsh
 ros2 run coordinate_follower coordinate_sequence_client
 ```
 
