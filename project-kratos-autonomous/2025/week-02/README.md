@@ -1,6 +1,6 @@
 # Week 2 — Obstacle Avoidance using LaserScan
 
-**Source:** [QSTP Assignment 2: Obstacle Avoidance using LaserScan](assignment.pdf)
+**Source:** [QSTP Assignment 2: Obstacle Avoidance using LaserScan](https://drive.google.com/file/d/1QhvxKXa1Y8qhgHAuWOKMzXnvKwSBJU3f/view?usp=sharing)
 
 ## Objective
 
