@@ -1,0 +1,6 @@
+# Target coordinates: x y
+# Units: meters
+# Coordinate frame: map
+
+0.30 0.00
+0.60 0.00
