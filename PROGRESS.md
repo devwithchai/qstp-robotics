@@ -3,7 +3,7 @@
 A lightweight snapshot of assignment status in this repository. It distinguishes code that is present from work that has actually been tested; it is not intended as a detailed study log.
 
 **Last updated:** 15 November 2026  
-**Repository status:** The 2025 Week 1–4 work has been merged into `main`.
+**Repository status:** Project Kratos 2025 Weeks 1–4 source and documentation are in `main`. Week 3 was tested locally in Webots; a clean-clone reproduction check is still pending.
 
 ## Project Kratos — Autonomous Subsystem (2024)
 
@@ -19,7 +19,7 @@ A lightweight snapshot of assignment status in this repository. It distinguishes
 - Week 3: check A* neighbor costs, priority-queue updates, map indexing, and how the robot stops at its final goal.
 - Keep the original exercise goals separate from extra experiments. Record actual terminal/simulation results rather than marking code as tested in advance.
 
-A repair proposal for 2024 Weeks 2–3 is open as [PR #9](https://github.com/devwithchai/qstp-robotics/pull/9). It has not been merged; its unit tests, package builds, and simulator runtime checks are still pending.
+A repair proposal for 2024 Weeks 2–3 was submitted in [PR #9](https://github.com/devwithchai/qstp-robotics/pull/9), but the PR was closed without merging. Its proposed changes are not part of `main`, and the original Week 2–3 files remain unchanged. The unit tests added on that branch were not executed; ROS package builds and simulator runtime checks were not completed. Any future repair should start on a new branch.
 
 ## Project Kratos — Autonomous Subsystem (2025)
 
@@ -27,7 +27,7 @@ A repair proposal for 2024 Weeks 2–3 is open as [PR #9](https://github.com/dev
 | --- | --- | --- |
 | 1 | ROS 2 setup and velocity publishing | Implemented and runtime-tested in Webots; demonstration recorded; merged into `main`. |
 | 2 | TurtleBot obstacle avoidance | Implemented and tested in Webots; demonstration recorded; merged into `main`. |
-| 3 | Coordinate follower using action servers | Implemented and tested in the local Webots simulation; action interface, server, and client packages are included in the repository; merged into `main`. |
+| 3 | Coordinate follower using action servers | Implemented and tested in the local Webots simulation; action interface, server, and client packages are present under `week-03/ros2_ws/src/` in `main`. A clean-clone build/run check is still pending. |
 | 4 | Marker detection, self-correcting navigation, and marker-based turns | Implemented and successfully verified in Webots; five-marker navigation sequence and screen-recorded run completed; merged into `main`. |
 
 Week 4 implementation notes: it uses an e-puck instead of the handout's TurtleBot3 Waffle and route-specific turn angles instead of fixed 90-degree turns. See the [Week 4 README](project-kratos-autonomous/2025/week-04/README.md).
@@ -57,7 +57,8 @@ Only one edition of this program is included, so there is no extra year director
 
 ## Next steps
 
-- [ ] Decide whether to continue or close the pending 2024 repair PR #9.
+- [ ] Revisit 2024 Week 2 and Week 3 repairs on a new branch; run unit tests, ROS package builds, and simulator checks before marking the work verified.
+- [ ] Build and run the 2025 Week 3 workspace from a fresh clone to confirm repository reproducibility.
 - [ ] Add the 2026 Project Kratos work as assignments are implemented and tested.
 - [ ] Organize and document the 2026 Introduction to ROS2 work as it progresses.
 
