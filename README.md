@@ -8,7 +8,7 @@ I participated in the Project Kratos Autonomous Subsystem QSTP in 2024, 2025, an
 
 | Program | Edition | Repository status |
 |---|---:|---|
-| Project Kratos - Autonomous Subsystem QSTP | 2024 | Partial work preserved; Week 2–3 repairs remain unmerged |
+| Project Kratos - Autonomous Subsystem QSTP | 2024 | Original work preserved; proposed Week 2–3 repairs were closed without merging |
 | Project Kratos - Autonomous Subsystem QSTP | 2025 | Weeks 1–4 implementations are in `main` |
 | Project Kratos - Autonomous Subsystem QSTP | 2026 | Not uploaded yet |
 | Introduction to ROS2 | 2026 | Not uploaded yet |
