@@ -1,0 +1,5 @@
+# Local editor settings
+.vscode/
+
+# Webots editor metadata (keep the .wbt world and textures)
+worlds/.*.wbproj
